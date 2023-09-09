@@ -4,14 +4,15 @@
 #include <Arduino.h>
 
 
-class Ultrasonic {
+class Ultrasonic 
+{
   public:
-    Ultrasonic(int triggerPin, int echoPin);
+    Ultrasonic(uint8_t triggerPin, uint8_t echoPin);
     void run();
-    double getDistance();
+    uint16_t getDistance();
   private:
-    int triggerPin;
-    int echoPin;
+    uint8_t triggerPin;
+    uint8_t echoPin;
 };
 
 #endif

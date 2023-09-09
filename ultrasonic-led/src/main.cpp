@@ -15,8 +15,8 @@ void setup()
 
 void loop()
 {
-  double distance = ultrasonic.getDistance();
-  ledController.blink(distance);
-  Serial.println(distance);
+  uint16_t distance = ultrasonic.getDistance();
+  ledController.blinkBasedOnDistance(distance);
+  Serial.printf("Distance: %d cm\n", distance);
   delay(500);
 }

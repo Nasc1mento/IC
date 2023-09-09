@@ -3,14 +3,16 @@
 
 #include <Arduino.h>
 
-class LedController {
+
+class LedController 
+{
   public:
-    LedController(int pin);
+    LedController(uint8_t pin);
     void run();
-    void blink(int n);
+    void blinkBasedOnDistance(uint16_t distance);
   private:
-    int pin;
-    int getDelayByDistance(int n);
+    uint8_t pin;
+    uint16_t getDelayByDistance(uint16_t distance);
 };
 
 #endif

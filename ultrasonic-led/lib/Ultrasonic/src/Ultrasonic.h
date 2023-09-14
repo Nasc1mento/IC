@@ -1,18 +1,16 @@
-#ifndef Ultrasonic_h
-#define Ultrasonic_h
+#ifndef ULTRASONIC_H
+#define ULTRASONIC_H
 
-#include <Arduino.h>
+#include <stdint.h>
 
+typedef struct {
+    uint8_t trigger_pin;
+    uint8_t echo_pin;
+}ultrasonic;
 
-class Ultrasonic 
-{
-  public:
-    Ultrasonic(uint8_t triggerPin, uint8_t echoPin);
-    void run();
-    uint16_t getDistance();
-  private:
-    uint8_t triggerPin;
-    uint8_t echoPin;
-};
+ultrasonic ultrasonic_init(uint8_t trigger_pin, uint8_t echo_pin);
+void ultrasonic_setup(ultrasonic u);
+void ultrasonic_run(ultrasonic u);
+uint16_t ultrasonic_calculate_distance(ultrasonic u);
 
 #endif

@@ -1,8 +1,8 @@
 #ifndef BLINK_BASED_ON_DISTANCE_H
 #define BLINK_BASED_ON_DISTANCE_H
 
-#include "Ultrasonic.h"
-#include "Led.h"
+#include "ultrasonic.h"
+#include "led.h"
 
 void blink_based_on_distance_setup(ultrasonic u, led l);
 void blink_based_on_distance_run(ultrasonic u, led l);

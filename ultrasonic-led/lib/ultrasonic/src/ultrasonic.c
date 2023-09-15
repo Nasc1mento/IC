@@ -1,4 +1,4 @@
-#include "Ultrasonic.h"
+#include "ultrasonic.h"
 #include <driver/gpio.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
@@ -13,7 +13,8 @@ ultrasonic ultrasonic_init(uint8_t trigger_pin, uint8_t echo_pin)
     return u;
 }
 
-void ultrasonic_setup(ultrasonic u) {
+void ultrasonic_setup(ultrasonic u) 
+{
     esp_rom_gpio_pad_select_gpio(u.trigger_pin);
     esp_rom_gpio_pad_select_gpio(u.echo_pin);
     gpio_set_direction(u.trigger_pin, GPIO_MODE_OUTPUT);

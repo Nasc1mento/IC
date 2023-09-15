@@ -10,7 +10,6 @@ typedef struct {
 
 ultrasonic ultrasonic_init(uint8_t trigger_pin, uint8_t echo_pin);
 void ultrasonic_setup(ultrasonic u);
-void ultrasonic_run(ultrasonic u);
-uint16_t ultrasonic_calculate_distance(ultrasonic u);
+uint16_t ultrasonic_run(ultrasonic u);
 
 #endif
